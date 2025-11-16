@@ -1,0 +1,352 @@
+[
+  {
+    "date": "2024-01-24",
+    "location": "Tuapse",
+    "damage": "Reported vacuum unit hit resulting in full stoppage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-01-29",
+    "location": "Slavneft-YANOS (Yaroslav)",
+    "damage": "Attack was reported to be thwarted, assume no damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-01-31",
+    "location": "Nevsky Mazut",
+    "damage": "Fire, damage not confirmed",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-02-09",
+    "location": "Afipsky \n(Neftekachka)",
+    "damage": "No reported damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-02-09",
+    "location": "Ilsky \n(Ilyinsky)",
+    "damage": "Attacked resulting in a fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-12",
+    "location": "Nizhny Novgorod\n(NORSI)",
+    "damage": "Column hit, major fire, one of two units offline",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-12",
+    "location": "Kirishi",
+    "damage": "No reported damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-13",
+    "location": "Novoshakhtinsk \n(Rostov)",
+    "damage": "Columns hit with major fire, operations reported to be fully supended",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-13",
+    "location": "Ryazan - (2 separate units, AVT-4 and AVT-6)",
+    "damage": "Column hit, major fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-15",
+    "location": "Kaluga / Kaluganefteprodukt",
+    "damage": "Major fire, damage not confirmed",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-16",
+    "location": "Syzran",
+    "damage": "Major fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-17",
+    "location": "Slavyansk",
+    "damage": "Column hit, major fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-23",
+    "location": "Novo Kuibyshevsk",
+    "damage": "No reported damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-23",
+    "location": "Kuibyshev",
+    "damage": "Column hit, major fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-03-25",
+    "location": "Saratov",
+    "damage": "Minor fire, no damage confirmed.",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-04-02",
+    "location": "Nizhnekamsk I\n(Taneco)",
+    "damage": "Fire reported",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-04-27",
+    "location": "Slavyansk",
+    "damage": "Reported hit to distillation tower w/major fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-04-27",
+    "location": "Ilsky \n(Ilyinsky)",
+    "damage": "Reported attack, small fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-05-01",
+    "location": "Nizhnedevitsk  / Voronezhsky",
+    "damage": "Attacked, no reported damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-05-01",
+    "location": "Ryazan - (2 separate units, AVT-4 and AVT-6)",
+    "damage": "Large fire, additional damage was reported after prior damage was said to have been repaired",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-05-10",
+    "location": "Kaluga / Kaluganefteprodukt",
+    "damage": "Major fire, damage not confirmed",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-05-11",
+    "location": "Volgograd",
+    "damage": "Major fire reported",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-05-17",
+    "location": "Tuapse",
+    "damage": "Major fire, reported hit to LPG production unit",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-05-19",
+    "location": "Slavyansk",
+    "damage": "Major fire, operations reported suspended by refinery officials (Assumed repaired as of Jan 25)",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-06-02",
+    "location": "Ukhta",
+    "damage": "Large fire & explosions reported at Ukhta; Russian officials attributed the incident to \"non-compliance with safety regulations\" ",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-06-05",
+    "location": "Novoshakhtinsk \n(Rostov)",
+    "damage": "Major fire to a main distillation column.  Refinery likely had just been coming back online after March attack.",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-06-14",
+    "location": "Nizhnedevitsk  / Voronezhsky",
+    "damage": "Reported damage to fuel tanks",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-06-19",
+    "location": "Afipsky \n(Neftekachka)",
+    "damage": "Fire at nearby depot; no apparent refinery damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-06-21",
+    "location": "Afipsky \n(Neftekachka)",
+    "damage": "Claimed attack, but no damage reported",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-06-21",
+    "location": "Ilsky \n(Ilyinsky)",
+    "damage": "Claimed attack, damage reported to admin bldgs",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-07-22",
+    "location": "Tuapse",
+    "damage": "Fire reported, but no indications of significant damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-08-26",
+    "location": "Omsk",
+    "damage": "Russian media reported the explosion occurred at AVT-11 unit; some sources indicated a Ukrainian strike, but not officially confirmed.",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-09-01",
+    "location": "Moscow",
+    "damage": "Suspended operations after attack, but reported to resume a few weeks later.",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-11-08",
+    "location": "Saratov",
+    "damage": "Drone attack reported, not able to confirm any damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2024-12-19",
+    "location": "Novoshakhtinsk \n(Rostov)",
+    "damage": "Missle and drone attack started fire, operatons reportedly suspended at least temporarily",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-01-11",
+    "location": "Nizhnekamsk I\n(Taneco)",
+    "damage": "Drone attack, explosion reported, smoke & flames seen at refinery, but Russia claimed it was a normal flare, no news on damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-01-14",
+    "location": "Saratov",
+    "damage": "Drones destroyed two storage tanks at refinery",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-01-16",
+    "location": "Nizhnedevitsk  / Voronezhsky",
+    "damage": "Drone attack started fire in depot associated to refinery",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-01-17",
+    "location": "Kaluga / Kaluganefteprodukt",
+    "damage": "Drone attack caused a fire at an industrial believed to be the sites oil depot",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-01-24",
+    "location": "Ryazan - (2 separate units, AVT-4 and AVT-6)",
+    "damage": "Drones damaged railway loading and hydrotreater causing halt to ops",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-01-28",
+    "location": "Nizhny Novgorod\n(NORSI)",
+    "damage": "Major fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-01-31",
+    "location": "Volgograd",
+    "damage": "Drone attack caused small fire; quickly extinguished",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-03",
+    "location": "Volgograd",
+    "damage": "Fire reported with some damage",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-03",
+    "location": "Volgograd",
+    "damage": "Drone attack with large fire",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-03",
+    "location": "Ekoton",
+    "damage": "Reported explosions in village of Svetlyi Yay; no confirmation what was hit, but this small refinery located there.",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-03",
+    "location": "Astrakhan",
+    "damage": "Drone attack with large fire; reported that ops suspended \"at least several months\" for repairs",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-10",
+    "location": "Afipsky \n(Neftekachka)",
+    "damage": "Reported attack, no news on damage.",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-11",
+    "location": "Saratov",
+    "damage": "Fire, pipeline to catalytic reforming unit damaged",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-15",
+    "location": "Volgograd",
+    "damage": "Drone attack, reports of fire, limited info",
+    "category": "Refineries",
+    "coordinates": null
+  },
+  {
+    "date": "2025-02-17",
+    "location": "Ilsky (Ilyinsky)",
+    "damage": "Large fire reported; no news of extent of damage",
+    "category": "Refineries",
+    "coordinates": null
+  }
+]

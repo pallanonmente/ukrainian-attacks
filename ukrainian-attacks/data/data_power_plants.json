@@ -1,0 +1,64 @@
+[
+  {
+    "date": "2025-11-13",
+    "location": "Novovoronezh Nuclear Power Plant",
+    "region": "Voronezh Oblast",
+    "coordinates": [
+      51.3183,
+      39.2333
+    ],
+    "type": "Nuclear Power Plant",
+    "capacity_mw": 3000,
+    "attack_type": "Drone attack",
+    "damage": "8 drones attacked, 3 units temporarily disconnected",
+    "status": "Operational - Full restoration",
+    "distance_km": 320,
+    "category": "Power_Plants"
+  },
+  {
+    "date": "2025-11-08",
+    "location": "Belgorod TPP Luch",
+    "region": "Belgorod Oblast",
+    "coordinates": [
+      50.595,
+      36.5872
+    ],
+    "type": "Thermal Power Plant",
+    "attack_type": "Rocket/Drone attack",
+    "damage": "Equipment damaged, 20,000+ residents without power",
+    "status": "Severely damaged",
+    "distance_km": 40,
+    "category": "Power_Plants"
+  },
+  {
+    "date": "2025-11-08",
+    "location": "Voronezh TEC-1",
+    "region": "Voronezh Oblast",
+    "coordinates": [
+      51.6605,
+      39.1843
+    ],
+    "type": "Thermal Power Plant",
+    "attack_type": "Drone/Rocket attack",
+    "damage": "3 rockets hit, roof and boiler room destroyed",
+    "status": "Severely damaged",
+    "distance_km": 280,
+    "category": "Power_Plants"
+  },
+  {
+    "date": "2025-09-11",
+    "location": "Smolensk Nuclear Power Plant",
+    "region": "Smolensk Oblast",
+    "coordinates": [
+      54.1667,
+      33.2333
+    ],
+    "type": "Nuclear Power Plant",
+    "capacity_mw": 3000,
+    "attack_type": "Drone attack",
+    "damage": "Windows damaged in auxiliary buildings",
+    "status": "Operational",
+    "distance_km": 400,
+    "category": "Power_Plants"
+  }
+]

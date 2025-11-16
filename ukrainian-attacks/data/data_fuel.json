@@ -1,0 +1,48 @@
+[
+  {
+    "date": "2025-11-14",
+    "location": "Sheskharis Oil Depot",
+    "region": "Krasnodar Krai",
+    "coordinates": [
+      44.7233,
+      37.7686
+    ],
+    "type": "Oil Depot",
+    "attack_type": "Drone attack",
+    "damage": "Major fire at oil depot",
+    "status": "Fire extinguished",
+    "distance_km": 250,
+    "category": "Fuel_Depots"
+  },
+  {
+    "date": "2025-10-15",
+    "location": "Feodosia Terminal",
+    "region": "Crimea",
+    "coordinates": [
+      45.0319,
+      35.3797
+    ],
+    "type": "Oil Terminal",
+    "capacity_tons": 250000,
+    "attack_type": "Drone attack",
+    "damage": "16 tanks damaged, 3+ day fire",
+    "status": "Major fire",
+    "distance_km": 250,
+    "category": "Fuel_Depots"
+  },
+  {
+    "date": "2025-08-18",
+    "location": "Proletarsk Oil Depot",
+    "region": "Rostov Oblast",
+    "coordinates": [
+      46.7031,
+      43.0158
+    ],
+    "type": "Oil Depot",
+    "attack_type": "Drone attack",
+    "damage": "Major fire extinguished on 16th day",
+    "status": "Severely damaged",
+    "distance_km": 300,
+    "category": "Fuel_Depots"
+  }
+]

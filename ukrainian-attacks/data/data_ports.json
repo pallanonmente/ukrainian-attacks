@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2025-11-14",
+    "location": "Novorossiysk Port - Sheskharis",
+    "region": "Krasnodar Krai",
+    "coordinates": [
+      44.7233,
+      37.7686
+    ],
+    "type": "Oil Terminal",
+    "capacity_bbl_day": 2000000,
+    "attack_type": "Drone + Neptune missiles",
+    "damage": "Major fire, containers damaged",
+    "status": "Operations suspended",
+    "distance_km": 250,
+    "category": "Ports",
+    "casualties": "3 crew injured"
+  },
+  {
+    "date": "2025-11-02",
+    "location": "Tuapse Oil Terminal",
+    "region": "Krasnodar Krai",
+    "coordinates": [
+      44.1,
+      39.08
+    ],
+    "type": "Oil Terminal",
+    "capacity_bbl_day": 240000,
+    "attack_type": "Drone attack",
+    "damage": "5 drone strikes, tanker on fire",
+    "status": "Operations suspended",
+    "distance_km": 220,
+    "category": "Ports"
+  },
+  {
+    "date": "2025-09-12",
+    "location": "Primorsk Terminal",
+    "region": "Leningrad Oblast",
+    "coordinates": [
+      60.3667,
+      28.6167
+    ],
+    "type": "Oil Terminal",
+    "capacity_bbl_day": 1500000,
+    "attack_type": "Drone attack",
+    "damage": "Fire on vessel and pumping station",
+    "status": "Damaged",
+    "distance_km": 1100,
+    "category": "Ports"
+  }
+]

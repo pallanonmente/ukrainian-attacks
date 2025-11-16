@@ -1,0 +1,85 @@
+[
+  {
+    "date": "2025-11-08",
+    "location": "Balashovskaya LEP",
+    "region": "Volgograd Oblast",
+    "coordinates": [
+      50.2033,
+      43.1697
+    ],
+    "voltage_kv": 500,
+    "capacity_mva": 1523,
+    "attack_type": "Drone attack",
+    "damage": "Fire after debris fall, power outages",
+    "status": "Damaged",
+    "distance_km": 350,
+    "category": "Substations",
+    "attack_count": 3
+  },
+  {
+    "date": "2025-10-31",
+    "location": "Vladimirskaya",
+    "region": "Vladimir Oblast",
+    "coordinates": [
+      56.1333,
+      40.3833
+    ],
+    "voltage_kv": 750,
+    "capacity_mva": 4010,
+    "attack_type": "Drone attack",
+    "damage": "Major fire after two hits",
+    "status": "Major fire",
+    "distance_km": 550,
+    "category": "Substations",
+    "attack_count": 2
+  },
+  {
+    "date": "2025-10-29",
+    "location": "Novobryanskaya",
+    "region": "Bryansk Oblast",
+    "coordinates": [
+      52.5833,
+      33.4167
+    ],
+    "voltage_kv": 750,
+    "capacity_mva": 3500,
+    "attack_type": "Drone attack",
+    "damage": "Two explosions, fire started",
+    "status": "Damaged",
+    "distance_km": 150,
+    "category": "Substations",
+    "casualties": 1
+  },
+  {
+    "date": "2025-10-18",
+    "location": "Veshkaima",
+    "region": "Ulyanovsk Oblast",
+    "coordinates": [
+      54.1333,
+      46.3667
+    ],
+    "voltage_kv": 500,
+    "capacity_mva": 670,
+    "attack_type": "Drone attack",
+    "damage": "Four drones hit, fire localized",
+    "status": "Damaged",
+    "distance_km": 900,
+    "category": "Substations"
+  },
+  {
+    "date": "2025-10-14",
+    "location": "Arzamasskaya",
+    "region": "Nizhny Novgorod Oblast",
+    "coordinates": [
+      55.1833,
+      43.5167
+    ],
+    "voltage_kv": 500,
+    "capacity_mva": 1502,
+    "attack_type": "Drone attack",
+    "damage": "Fire on substation, transformers destroyed",
+    "status": "Damaged",
+    "distance_km": 730,
+    "category": "Substations"
+  }
+]

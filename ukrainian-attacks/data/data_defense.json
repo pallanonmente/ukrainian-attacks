@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2025-08-11",
+    "location": "Arzamas APZ",
+    "region": "Nizhny Novgorod Oblast",
+    "coordinates": [
+      55.3958,
+      43.8403
+    ],
+    "type": "Missile Components",
+    "products": "X-32, X-101, X-59 guidance systems",
+    "attack_type": "Drone attack",
+    "damage": "Production facilities destroyed",
+    "status": "Severely damaged",
+    "distance_km": 759,
+    "category": "Defense_Facilities",
+    "casualties": "1 killed, 2 injured"
+  },
+  {
+    "date": "2025-10-20",
+    "location": "JSC Radiozavod",
+    "region": "Penza Oblast",
+    "coordinates": [
+      53.2,
+      45.0
+    ],
+    "type": "Air Defense Systems",
+    "products": "Polyana-D4M1 (S-300/S-400)",
+    "attack_type": "Drone attack",
+    "damage": "Production line destroyed",
+    "status": "Production line destroyed",
+    "distance_km": 625,
+    "category": "Defense_Facilities"
+  }
+]

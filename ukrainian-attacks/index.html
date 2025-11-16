@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukrainian Attacks on Russian Infrastructure - Live Analysis</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Papa Parse for CSV -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1>
+                <i class="fas fa-server"></i>
+                Ukrainian Attacks on Russian Infrastructure
+            </h1>
+            <p class="subtitle">Comprehensive Database & Analysis | Jan 2024 - Nov 2025</p>
+        </div>
+        <div class="header-meta">
+            <span class="meta-badge">📊 162 Attacks Documented</span>
+            <span class="meta-badge">🌍 25+ Regions</span>
+            <span class="meta-badge">📚 50+ Sources</span>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-navigation">
+        <button class="tab-button active" data-tab="dashboard">
+            <i class="fas fa-chart-line"></i> Dashboard
+        </button>
+        <button class="tab-button" data-tab="timeline">
+            <i class="fas fa-hourglass-end"></i> Timeline
+        </button>
+        <button class="tab-button" data-tab="map">
+            <i class="fas fa-map"></i> Map
+        </button>
+        <button class="tab-button" data-tab="categories">
+            <i class="fas fa-layer-group"></i> Categories
+        </button>
+        <button class="tab-button" data-tab="statistics">
+            <i class="fas fa-chart-bar"></i> Statistics
+        </button>
+        <button class="tab-button" data-tab="impact">
+            <i class="fas fa-bolt"></i> Impact
+        </button>
+        <button class="tab-button" data-tab="sources">
+            <i class="fas fa-book"></i> Sources
+        </button>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="app-container">
+        
+        <!-- DASHBOARD TAB -->
+        <div id="dashboard-tab" class="tab-content active">
+            <div class="dashboard-grid">
+                <!-- Hero Stats -->
+                <section class="hero-stats">
+                    <div class="stat-card stat-primary">
+                        <div class="stat-icon"><i class="fas fa-explosion"></i></div>
+                        <div class="stat-content">
+                            <h3>Total Attacks</h3>
+                            <p class="stat-number" id="stat-total">162</p>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-secondary">
+                        <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                        <div class="stat-content">
+                            <h3>Regions Affected</h3>
+                            <p class="stat-number" id="stat-regions">25+</p>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-tertiary">
+                        <div class="stat-icon"><i class="fas fa-calendar"></i></div>
+                        <div class="stat-content">
+                            <h3>Period</h3>
+                            <p class="stat-text">Jan 2024 - Nov 2025</p>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-quaternary">
+                        <div class="stat-icon"><i class="fas fa-ruler"></i></div>
+                        <div class="stat-content">
+                            <h3>Max Distance</h3>
+                            <p class="stat-number">1,900+ km</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Charts Row -->
+                <section class="charts-row">
+                    <div class="chart-container">
+                        <h3><i class="fas fa-pie-chart"></i> Attacks by Category</h3>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3><i class="fas fa-line-chart"></i> Monthly Trend</h3>
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Recent Attacks -->
+                <section class="recent-attacks">
+                    <h2><i class="fas fa-history"></i> Recent Attacks</h2>
+                    <div id="recentAttacksList" class="attacks-list"></div>
+                </section>
+            </div>
+        </div>
+
+        <!-- TIMELINE TAB -->
+        <div id="timeline-tab" class="tab-content">
+            <div class="timeline-container">
+                <h2><i class="fas fa-hourglass-end"></i> Attack Timeline</h2>
+                <div id="timelineContent" class="timeline-content"></div>
+            </div>
+        </div>
+
+        <!-- MAP TAB -->
+        <div id="map-tab" class="tab-content">
+            <div class="map-container">
+                <div class="map-controls">
+                    <h3>Interactive Attack Map</h3>
+                    <div class="filter-bar">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="Refineries">Refineries</option>
+                            <option value="Power_Plants">Power Plants</option>
+                            <option value="Substations">Substations</option>
+                            <option value="Ports">Ports</option>
+                            <option value="Defense_Facilities">Defense Facilities</option>
+                            <option value="Fuel_Depots">Fuel Depots</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="mapElement" class="map"></div>
+            </div>
+        </div>
+
+        <!-- CATEGORIES TAB -->
+        <div id="categories-tab" class="tab-content">
+            <div class="categories-container">
+                <div class="category-tabs">
+                    <button class="category-tab-btn active" data-category="Refineries">
+                        <i class="fas fa-industry"></i> Refineries
+                    </button>
+                    <button class="category-tab-btn" data-category="Power_Plants">
+                        <i class="fas fa-plug"></i> Power Plants
+                    </button>
+                    <button class="category-tab-btn" data-category="Substations">
+                        <i class="fas fa-bolt"></i> Substations
+                    </button>
+                    <button class="category-tab-btn" data-category="Ports">
+                        <i class="fas fa-ship"></i> Ports
+                    </button>
+                    <button class="category-tab-btn" data-category="Defense_Facilities">
+                        <i class="fas fa-shield-alt"></i> Defense
+                    </button>
+                    <button class="category-tab-btn" data-category="Fuel_Depots">
+                        <i class="fas fa-gas-pump"></i> Fuel Depots
+                    </button>
+                </div>
+                <div id="categoryContent" class="category-content"></div>
+            </div>
+        </div>
+
+        <!-- STATISTICS TAB -->
+        <div id="statistics-tab" class="tab-content">
+            <div class="statistics-container">
+                <section class="stats-section">
+                    <h2><i class="fas fa-chart-area"></i> Geographic Distribution</h2>
+                    <div class="stats-grid">
+                        <div class="chart-container">
+                            <canvas id="regionChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="distanceChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-section">
+                    <h2><i class="fas fa-crosshairs"></i> Attack Patterns</h2>
+                    <div class="stats-grid">
+                        <div class="chart-container">
+                            <canvas id="typeChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="damageChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- IMPACT TAB -->
+        <div id="impact-tab" class="tab-content">
+            <div class="impact-container">
+                <section class="impact-section">
+                    <h2><i class="fas fa-chart-pie"></i> Strategic Impact Analysis</h2>
+                    
+                    <div class="impact-grid">
+                        <div class="impact-card energy">
+                            <h3><i class="fas fa-flash"></i> Energy Infrastructure</h3>
+                            <ul>
+                                <li><strong>NPP Attacks:</strong> 2 nuclear plants targeted</li>
+                                <li><strong>Capacity Lost:</strong> 26,327 MVA</li>
+                                <li><strong>Key Target:</strong> Vladimirskaya (4,010 MVA)</li>
+                                <li><strong>Vulnerability:</strong> Centralized grid system</li>
+                            </ul>
+                        </div>
+
+                        <div class="impact-card oil">
+                            <h3><i class="fas fa-oil-can"></i> Oil & Gas Sector</h3>
+                            <ul>
+                                <li><strong>Export Terminals:</strong> 3 major ports affected</li>
+                                <li><strong>Capacity Lost:</strong> 3.74M bbl/day</li>
+                                <li><strong>Refineries:</strong> -30.6% capacity reduction</li>
+                                <li><strong>Impact:</strong> Revenue loss billions $/year</li>
+                            </ul>
+                        </div>
+
+                        <div class="impact-card military">
+                            <h3><i class="fas fa-fighter-jet"></i> Military Production</h3>
+                            <ul>
+                                <li><strong>Factories Hit:</strong> 5 defense plants</li>
+                                <li><strong>Missile Systems:</strong> X-32, X-101, X-59</li>
+                                <li><strong>Air Defense:</strong> S-300/S-400 coordination damaged</li>
+                                <li><strong>Effect:</strong> Production capability degraded</li>
+                            </ul>
+                        </div>
+
+                        <div class="impact-card economic">
+                            <h3><i class="fas fa-chart-line"></i> Economic Impact</h3>
+                            <ul>
+                                <li><strong>Oil Losses:</strong> ~$200M/month (est.)</li>
+                                <li><strong>Reconstruction:</strong> Multi-billion $ costs</li>
+                                <li><strong>Logistics:</strong> Military supply chain stressed</li>
+                                <li><strong>Growth Impact:</strong> GDP reduction ~0.5-1%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="impact-section">
+                    <h2><i class="fas fa-calculator"></i> Economic Impact Calculator</h2>
+                    <div class="calculator">
+                        <label>Oil Price ($/barrel): <input type="number" id="oilPrice" value="75" min="0"></label>
+                        <label>Days: <input type="number" id="daysCount" value="30" min="1"></label>
+                        <button onclick="calculateImpact()">Calculate</button>
+                        <div id="impactResult" class="result"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- SOURCES TAB -->
+        <div id="sources-tab" class="tab-content">
+            <div class="sources-container">
+                <h2><i class="fas fa-book"></i> Methodology & Sources</h2>
+                
+                <section class="sources-section">
+                    <h3>Database Quality Standards</h3>
+                    <ul>
+                        <li>✅ <strong>50+ verified sources</strong> - Multi-source cross-verification</li>
+                        <li>✅ <strong>Russian official media</strong> - TASS, Interfax, RBC, Forbes.ru</li>
+                        <li>✅ <strong>Regional confirmations</strong> - Governors and local administrations</li>
+                        <li>✅ <strong>Ukrainian sources</strong> - Kyiv Independent, Ukrainian General Staff</li>
+                        <li>✅ <strong>International verification</strong> - Reuters, BBC, Bloomberg</li>
+                        <li>✅ <strong>WCAG 2.1 AA</strong> - Accessible design standards</li>
+                    </ul>
+                </section>
+
+                <section class="sources-section">
+                    <h3>Key Russian Sources</h3>
+                    <div class="sources-grid">
+                        <div class="source-card">
+                            <h4>Official Media</h4>
+                            <ul>
+                                <li>TASS.ru</li>
+                                <li>Interfax.ru</li>
+                                <li>RBC.ru</li>
+                                <li>Forbes.ru</li>
+                                <li>Kommersant.ru</li>
+                            </ul>
+                        </div>
+                        <div class="source-card">
+                            <h4>Technical Sources</h4>
+                            <ul>
+                                <li>Neftegaz.ru</li>
+                                <li>SO-UPS.ru (Grid)</li>
+                                <li>Energybase.ru</li>
+                                <li>Rosatom</li>
+                                <li>Transneft</li>
+                            </ul>
+                        </div>
+                        <div class="source-card">
+                            <h4>Regional Sources</h4>
+                            <ul>
+                                <li>Governor Reports</li>
+                                <li>Regional EMCs</li>
+                                <li>Municipal Admin</li>
+                                <li>Local Media</li>
+                                <li>Regional TG Channels</li>
+                            </ul>
+                        </div>
+                        <div class="source-card">
+                            <h4>Verification</h4>
+                            <ul>
+                                <li>Kyiv Independent</li>
+                                <li>Ukrainian GS</li>
+                                <li>Reuters</li>
+                                <li>BBC</li>
+                                <li>Bloomberg</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sources-section">
+                    <h2><i class="fas fa-download"></i> Download Data</h2>
+                    <div class="download-buttons">
+                        <button onclick="downloadCSV()" class="btn-download">
+                            <i class="fas fa-file-csv"></i> Download CSV
+                        </button>
+                        <button onclick="downloadJSON()" class="btn-download">
+                            <i class="fas fa-file-code"></i> Download JSON
+                        </button>
+                        <button onclick="generatePDF()" class="btn-download">
+                            <i class="fas fa-file-pdf"></i> Generate PDF Report
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>
+            <strong>Ukrainian Attacks Infrastructure Tracker</strong> | 
+            Framework v2.2.1 | 
+            Last Updated: November 16, 2025 | 
+            <a href="#" onclick="togglePresentation()">📺 Presentation Mode</a>
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/statistics.js"></script>
+    <script src="js/impact.js"></script>
+    <script src="js/sources.js"></script>
+</body>
+</html>
