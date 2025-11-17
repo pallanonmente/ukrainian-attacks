@@ -57,12 +57,12 @@ const ApplicationData = {
         
         try {
             // Load all JSON files
-            this.refineries = await this.fetchJSON('data_refineries.json');
-            this.powerPlants = await this.fetchJSON('data_power_plants.json');
-            this.substations = await this.fetchJSON('data_substations.json');
-            this.ports = await this.fetchJSON('data_ports.json');
-            this.defense = await this.fetchJSON('data_defense.json');
-            this.fuelDepots = await this.fetchJSON('data_fuel.json');
+            this.refineries = await this.fetchJSON('data/data_refineries.json');
+            this.powerPlants = await this.fetchJSON('data/data_power_plants.json');
+            this.substations = await this.fetchJSON('data/data_substations.json');
+            this.ports = await this.fetchJSON('data/data_ports.json');
+            this.defense = await this.fetchJSON('data/data_defense.json');
+            this.fuelDepots = await this.fetchJSON('data/data_fuel.json');
             
             // Combine all data
             this.combineData();
