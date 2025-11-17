@@ -54,7 +54,7 @@ const TimelineModule = {
         '</div>';
     }
 };
-
+window.TimelineModule = TimelineModule;
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = TimelineModule;
 }

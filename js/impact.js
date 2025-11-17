@@ -99,7 +99,7 @@ const ImpactModule = {
         `;
     }
 };
-
+window.ImpactModule = ImpactModule;
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = ImpactModule;
 }

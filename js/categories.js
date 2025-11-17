@@ -138,7 +138,7 @@ const CategoriesModule = {
         return `${formatDate(earliest)} - ${formatDate(latest)}`;
     }
 };
-
+window.CategoriesModule = CategoriesModule;
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = CategoriesModule;
 }

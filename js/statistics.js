@@ -228,7 +228,7 @@ const StatisticsModule = {
         });
     }
 };
-
+window.StatisticsModule = StatisticsModule;
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = StatisticsModule;
 }

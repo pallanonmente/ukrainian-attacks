@@ -74,7 +74,7 @@ const SourcesModule = {
         console.log('[Sources] PDF generation - Coming in v1.1.0');
     }
 };
-
+window.SourcesModule = SourcesModule;
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = SourcesModule;
 }

@@ -183,7 +183,7 @@ const DashboardModule = {
         });
     }
 };
-
+window.DashboardModule = DashboardModule;
 // Export if using modules
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = DashboardModule;
